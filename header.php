@@ -26,6 +26,9 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'wanderers' ); ?></a>
 
 	<header id="masthead" class="site-header">
+
+	<img src="<?php bloginfo('template_directory');?>/images/logo.svg" alt="Wanderers Logo" class="logo">
+
 		<div class="site-branding">
 			<?php
 			the_custom_logo();
@@ -38,11 +41,9 @@
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 				<?php
 			endif;
-			$wanderers_description = get_bloginfo( 'description', 'display' );
-			if ( $wanderers_description || is_customize_preview() ) :
 				?>
-				<p class="site-description"><?php echo $wanderers_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
+			
+		
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">

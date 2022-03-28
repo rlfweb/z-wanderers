@@ -20,12 +20,7 @@
 
 		if ( 'post' === get_post_type() ) :
 			?>
-			<div class="entry-meta">
-				<?php
-				wanderers_posted_on();
-				wanderers_posted_by();
-				?>
-			</div><!-- .entry-meta -->
+		
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
@@ -57,7 +52,5 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php wanderers_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+
 </article><!-- #post-<?php the_ID(); ?> -->

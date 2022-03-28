@@ -145,6 +145,16 @@ function wanderers_scripts() {
 
 	wp_enqueue_script( 'wanderers-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
+	// RLF - load base.css
+	wp_enqueue_style( 'wanderers-base',  get_template_directory_uri() . '/css/base.css');
+
+	// RLF - load custom.css
+	wp_enqueue_style( 'wanderers-custom',  get_template_directory_uri() . '/css/custom.css');
+
+	// RLF - load custom.js
+	wp_enqueue_script( 'custom',
+	get_template_directory_uri() . '/js/custom.js', array('jquery') );
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
